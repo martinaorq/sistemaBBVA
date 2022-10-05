@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="">
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="@JoinColumn">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/SistemaBbvaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/SistemaBBVAApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Persona.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -60,8 +60,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/Eithan/Downloads/sistemaBBVA"
   }
 }]]></component>
@@ -74,6 +76,14 @@
       <option name="presentableId" value="Default" />
       <updated>1664990136957</updated>
     </task>
+    <task id="LOCAL-00001" summary="@JoinColumn">
+      <created>1664996327273</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664996327273</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,5 +96,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="@JoinColumn" />
+    <option name="LAST_COMMIT_MESSAGE" value="@JoinColumn" />
   </component>
 </project>

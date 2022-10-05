@@ -1,5 +1,6 @@
 package com.martinacode.sistemaBBVA.controller;
 
+import com.martinacode.sistemaBBVA.model.Persona;
 import com.martinacode.sistemaBBVA.repository.CompraRepo;
 import com.martinacode.sistemaBBVA.repository.PersonaRepo;
 import com.martinacode.sistemaBBVA.repository.TarjetaRepo;
@@ -21,8 +22,10 @@ public class controlador {
     @Autowired
     private PersonaRepo repoPersona;
 
-    @PostMapping
+    @PostMapping("/insertarMartina")
     public String insertarPersona(){
+        Persona p=new Persona(45079627L,"Martina Orquera");
+        repoPersona.save(p);
         return "Se insertó persona correctamente.";
     }
 
