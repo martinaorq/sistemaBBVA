@@ -1,6 +1,8 @@
 package com.martinacode.sistemaBBVA.controller;
 
+import com.martinacode.sistemaBBVA.model.Compra;
 import com.martinacode.sistemaBBVA.model.Persona;
+import com.martinacode.sistemaBBVA.model.Tarjeta;
 import com.martinacode.sistemaBBVA.repository.CompraRepo;
 import com.martinacode.sistemaBBVA.repository.PersonaRepo;
 import com.martinacode.sistemaBBVA.repository.TarjetaRepo;
@@ -26,15 +28,37 @@ public class controlador {
     @Autowired
     private PersonaRepo repoPersona;
 
-    @GetMapping
-    public List<Persona> listar(){
+    @GetMapping("/listarPersonas")
+    public List<Persona> listarPersona(){
         return repoPersona.findAll();
     }
 
-    @PostMapping
+    @GetMapping("/listarTarjetas")
+    public List<Tarjeta> listarTarjetas(){
+        return repoTarjeta.findAll();
+    }
+
+    @GetMapping("/listarCompras")
+    public List<Compra> listarCompras(){
+        return repoCompra.findAll();
+    }
+
+    @PostMapping("/insertarPersona")
     public String insertarPersona(@RequestBody Persona p){
         repoPersona.save(p);
         return "Se insertó persona correctamente.";
+    }
+
+    @PostMapping("/insertarTarjeta")
+    public String insertarTarjeta(@RequestBody Tarjeta t){
+        repoTarjeta.save(t);
+        return "Se insertó tarjeta correctamente.";
+    }
+
+    @PostMapping("/insertarCompra")
+    public String insertarTarjeta(@RequestBody Compra c){
+        repoCompra.save(c);
+        return "Se insertó compra correctamente.";
     }
 
 }

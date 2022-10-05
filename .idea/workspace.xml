@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="Controller con postman">
-      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/SistemaBBVAApplication.java" afterDir="false" />
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="Solución de errores y mejora en Controller&#10;(Agregado de @RequestBody)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/controlador.java" afterDir="false" />
     </list>
@@ -122,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664997977266</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Solución de errores y mejora en Controller&#10;(Agregado de @RequestBody)">
+      <created>1664998672831</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664998672831</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +147,7 @@
     <MESSAGE value="Controller actualizado" />
     <MESSAGE value="Problema solucionado" />
     <MESSAGE value="Controller con postman" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controller con postman" />
+    <MESSAGE value="Solución de errores y mejora en Controller&#10;(Agregado de @RequestBody)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solución de errores y mejora en Controller&#10;(Agregado de @RequestBody)" />
   </component>
 </project>
