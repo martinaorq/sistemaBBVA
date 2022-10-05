@@ -23,8 +23,7 @@ public class controlador {
     private PersonaRepo repoPersona;
 
     @PostMapping("/insertarMartina")
-    public String insertarPersona(){
-        Persona p=new Persona(45079627L,"Martina Orquera");
+    public String insertarPersona(Persona p){
         repoPersona.save(p);
         return "Se insertó persona correctamente.";
     }
