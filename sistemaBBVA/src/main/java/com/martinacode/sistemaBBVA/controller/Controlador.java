@@ -18,8 +18,8 @@ import java.util.List;
 
 
 @RestController
-public class controlador {
-    Logger logger = LoggerFactory.getLogger(controlador.class);
+public class Controlador {
+    Logger logger = LoggerFactory.getLogger(Controlador.class);
 
     @Autowired
     private TarjetaRepo repoTarjeta;
@@ -28,17 +28,17 @@ public class controlador {
     @Autowired
     private PersonaRepo repoPersona;
 
-    @GetMapping("/listarPersonas")
+    @GetMapping("/personas")
     public List<Persona> listarPersona(){
         return repoPersona.findAll();
     }
 
-    @GetMapping("/listarTarjetas")
+    @GetMapping("/tarjetas")
     public List<Tarjeta> listarTarjetas(){
         return repoTarjeta.findAll();
     }
 
-    @GetMapping("/listarCompras")
+    @GetMapping("/compras")
     public List<Compra> listarCompras(){
         return repoCompra.findAll();
     }
