@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="@JoinColumn">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="Controller actualizado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/SistemaBbvaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/SistemaBBVAApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/SistemaBBVAApplication.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +61,29 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/Eithan/Downloads/sistemaBBVA"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="SistemaBBVAApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.SistemaBBVAApplication" />
+      <module name="sistemaBBVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.SistemaBBVAAplplication" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SistemaBBVAApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -83,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664996327273</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Controller actualizado">
+      <created>1664996825023</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664996825023</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="@JoinColumn" />
-    <option name="LAST_COMMIT_MESSAGE" value="@JoinColumn" />
+    <MESSAGE value="Controller actualizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Controller actualizado" />
   </component>
 </project>
