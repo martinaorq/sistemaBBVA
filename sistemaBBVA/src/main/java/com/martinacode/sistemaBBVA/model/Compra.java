@@ -15,9 +15,11 @@ public class Compra {
     private LocalDate fecha;
 
     @ManyToOne
+    @JoinColumn
     private Persona persona;
 
     @ManyToOne
+    @JoinColumn
     private Tarjeta tarjeta;
 
     private Compra(){}

@@ -13,6 +13,7 @@ public class Persona {
     private String nombre;
 
     @OneToMany
+    @JoinColumn
     private List<Tarjeta> tarjetas;
 
     private Persona(){}
