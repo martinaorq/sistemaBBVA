@@ -7,8 +7,12 @@ import com.martinacode.sistemaBBVA.repository.TarjetaRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 
 @RestController
@@ -22,8 +26,13 @@ public class controlador {
     @Autowired
     private PersonaRepo repoPersona;
 
-    @PostMapping("/insertarMartina")
-    public String insertarPersona(Persona p){
+    @GetMapping
+    public List<Persona> listar(){
+        return repoPersona.findAll();
+    }
+
+    @PostMapping
+    public String insertarPersona(@RequestBody Persona p){
         repoPersona.save(p);
         return "Se insertó persona correctamente.";
     }
