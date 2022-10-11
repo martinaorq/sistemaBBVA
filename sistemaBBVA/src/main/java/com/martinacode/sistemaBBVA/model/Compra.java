@@ -24,11 +24,13 @@ public class Compra {
 
     private Compra(){}
 
-    public Compra(String nombre, String precio, String descripcion, LocalDate fecha) {
+    public Compra(String nombre, String precio, String descripcion, LocalDate fecha, Persona persona, Tarjeta tarjeta) {
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;
         this.fecha = fecha;
+        this.persona = persona;
+        this.tarjeta = tarjeta;
     }
 
     public Long getId() {
