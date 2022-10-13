@@ -9,10 +9,7 @@ import com.martinacode.sistemaBBVA.repository.TarjetaRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -59,6 +56,18 @@ public class Controlador {
     public String insertarTarjeta(@RequestBody Compra c){
         repoCompra.save(c);
         return "Se insertó compra correctamente.";
+    }
+
+    @DeleteMapping("/borrarTarjeta")
+    public String eliminarTarjeta(@RequestParam(name="id")Long id){
+        repoTarjeta.deleteById(id);
+        return "Se borró la tarjeta correctamente";
+    }
+
+    @DeleteMapping("/borrarCompra")
+    public String eliminarcompra(@RequestParam(name="id")Long id){
+        repoCompra.deleteById(id);
+        return "Se borró la compra correctamente";
     }
 
 }
