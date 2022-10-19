@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="Correcciones constructor compra">
-      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/CompraController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CompraService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/ICompraService.java" afterDir="false" />
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="ACTUALIZACION: Delete y Creacion de Compra Service y Compra Controller">
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/model/Compra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/model/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/model/Tarjeta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/repository/CompraRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/repository/PersonaRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/repository/TarjetaRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CompraService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CompraServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/ICompraService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +28,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -60,15 +67,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eithan/Downloads/springSecurity/springSecurity&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/Eithan/Downloads/sistemaBBVA/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Eithan\Downloads\sistemaBBVA\sistemaBBVA\src\test\java\com\martinacode\sistemaBBVA" />
+      <recent name="C:\Users\Eithan\Downloads\sistemaBBVA\sistemaBBVA\src\test\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.martinacode.sistemaBBVA.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.martinacode.sistemaBBVA.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CompraServiceTest.whenListarComprasClienteThenListarComprasSoloDelClienteEspecificado">
     <configuration name="SistemaBBVAApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.SistemaBBVAApplication" />
       <module name="sistemaBBVA" />
@@ -82,8 +106,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CompraServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sistemaBBVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CompraServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompraServiceTest.whenListarComprasClienteThenListarComprasSoloDelClienteEspecificado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sistemaBBVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CompraServiceTest" />
+      <option name="METHOD_NAME" value="whenListarComprasClienteThenListarComprasSoloDelClienteEspecificado" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CompraServiceTest.whenListarComprasClienteThenListarComprasSoloDelClienteEspecificado" />
+        <item itemvalue="JUnit.CompraServiceTest" />
         <item itemvalue="Application.SistemaBBVAApplication" />
       </list>
     </recent_temporary>
@@ -153,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665511002801</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ACTUALIZACION: Delete y Creacion de Compra Service y Compra Controller">
+      <created>1665694242908</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665694242908</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +240,7 @@
     <MESSAGE value="Mejora en RestController" />
     <MESSAGE value="Correcciones" />
     <MESSAGE value="Correcciones constructor compra" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correcciones constructor compra" />
+    <MESSAGE value="ACTUALIZACION: Delete y Creacion de Compra Service y Compra Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZACION: Delete y Creacion de Compra Service y Compra Controller" />
   </component>
 </project>
