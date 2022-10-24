@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="ACTUALIZACION(NO FUNCIONAN LOS TESTS): intento de creación de tests">
-      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/PruebaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/PruebaTestTest.java" afterDir="false" />
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="ACTUALIZACION: Probando hacer tests con otro tutorial">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_4.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/model/Compra.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/model/Persona.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/model/Tarjeta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/repository/CompraRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/repository/PersonaRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/repository/TarjetaRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CompraService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CompraServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/ICompraService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Tarjeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Tarjeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/CompraRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/CompraRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/PersonaRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/PersonaRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/TarjetaRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/TarjetaRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CompraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CompraService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +72,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eithan/Downloads/sistemaBBVA/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eithan/Downloads/sistemaBBVA/sistemaBBVA/src/test/resources&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Eithan\Downloads\sistemaBBVA\sistemaBBVA\src\test\java\com\martinacode\sistemaBBVA" />
       <recent name="C:\Users\Eithan\Downloads\sistemaBBVA\sistemaBBVA\src\test\resources" />
+      <recent name="C:\Users\Eithan\Downloads\sistemaBBVA\sistemaBBVA\src\test\java\com\martinacode\sistemaBBVA" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -95,7 +91,7 @@
       <recent name="com.martinacode.sistemaBBVA.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PruebaTestTest.whenUsoGetNumBthenReciboNumB">
+  <component name="RunManager" selected="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente">
     <configuration name="CompraServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sistemaBBVA" />
       <extension name="coverage">
@@ -111,6 +107,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sistemaBBVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CompraServiceTest" />
+      <option name="METHOD_NAME" value="whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PruebaTestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sistemaBBVA" />
       <extension name="coverage">
@@ -122,22 +134,6 @@
       <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
       <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.PruebaTestTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PruebaTestTest.whenPongoMayoraCeroYMenoraBThenCorreBien" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sistemaBBVA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
-      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.PruebaTestTest" />
-      <option name="METHOD_NAME" value="whenPongoMayoraCeroYMenoraBThenCorreBien" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente" />
+        <item itemvalue="JUnit.CompraServiceTest" />
         <item itemvalue="JUnit.PruebaTestTest.whenUsoGetNumBthenReciboNumB" />
         <item itemvalue="JUnit.PruebaTestTest" />
         <item itemvalue="JUnit.PruebaTestTest.whenPongoNumeroMenorACerothentiraException" />
-        <item itemvalue="JUnit.PruebaTestTest.whenPongoMayoraCeroYMenoraBThenCorreBien" />
-        <item itemvalue="JUnit.CompraServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666211790111</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ACTUALIZACION: Probando hacer tests con otro tutorial">
+      <created>1666472373153</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666472373153</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,7 +291,15 @@
     <MESSAGE value="Correcciones constructor compra" />
     <MESSAGE value="ACTUALIZACION: Delete y Creacion de Compra Service y Compra Controller" />
     <MESSAGE value="ACTUALIZACION(NO FUNCIONAN LOS TESTS): intento de creación de tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZACION(NO FUNCIONAN LOS TESTS): intento de creación de tests" />
+    <MESSAGE value="ACTUALIZACION: Probando hacer tests con otro tutorial" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZACION: Probando hacer tests con otro tutorial" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.martinacode.sistemaBBVA.repository.CompraRepo$MockitoMock$Xmw8fgwF" memberName="mockitoInterceptor" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sistemaBBVA$PruebaTestTest.ic" NAME="PruebaTestTest Coverage Results" MODIFIED="1666472107227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

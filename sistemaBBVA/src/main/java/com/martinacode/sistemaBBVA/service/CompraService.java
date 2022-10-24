@@ -14,6 +14,10 @@ public class CompraService implements ICompraService{
     @Autowired
     private CompraRepo repoCompra;
 
+    public CompraService(CompraRepo repoCompra) {
+        this.repoCompra = repoCompra;
+    }
+
     @Override
     public List<Compra> listarComprasCliente(Long idCliente) {
         List <Compra> lista = repoCompra.findAll();

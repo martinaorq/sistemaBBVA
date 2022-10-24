@@ -16,7 +16,8 @@ public class Tarjeta {
 
     private Tarjeta(){}
 
-    public Tarjeta(String numero, String entidad) {
+    public Tarjeta(Long id,String numero, String entidad) {
+        this.id=id;
         this.numero = numero;
         this.entidad = entidad;
     }

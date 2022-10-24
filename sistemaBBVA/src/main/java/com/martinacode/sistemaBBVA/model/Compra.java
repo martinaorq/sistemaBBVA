@@ -26,7 +26,8 @@ public class Compra {
 
     private Compra(){}
 
-    public Compra(String nombre, String precio, String descripcion, LocalDate fecha, Persona persona, Tarjeta tarjeta) {
+    public Compra(Long id,String nombre, String precio, String descripcion, LocalDate fecha, Persona persona, Tarjeta tarjeta) {
+        this.id=id;
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;
