@@ -14,7 +14,7 @@ public class Tarjeta {
     private String numero;
     private String entidad;
 
-    private Tarjeta(){}
+    public Tarjeta(){}
 
     public Tarjeta(Long id,String numero, String entidad) {
         this.id=id;
@@ -24,6 +24,10 @@ public class Tarjeta {
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNumero() {

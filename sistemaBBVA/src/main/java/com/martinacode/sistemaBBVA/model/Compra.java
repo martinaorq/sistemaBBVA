@@ -24,7 +24,7 @@ public class Compra {
     @JoinColumn
     private Tarjeta tarjeta;
 
-    private Compra(){}
+    public Compra(){}
 
     public Compra(Long id,String nombre, String precio, String descripcion, LocalDate fecha, Persona persona, Tarjeta tarjeta) {
         this.id=id;
@@ -38,6 +38,10 @@ public class Compra {
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombre() {

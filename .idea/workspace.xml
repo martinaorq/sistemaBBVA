@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="ACTUALIZACION: Probando hacer tests con otro tutorial">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_4.xml" beforeDir="false" />
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="ACTUALIZACION: YA FUNCIONA!! (un test xD)">
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CompraServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Persona.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Tarjeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Tarjeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/CompraRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/CompraRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/PersonaRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/PersonaRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/TarjetaRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/TarjetaRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CompraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CompraService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +87,7 @@
       <recent name="com.martinacode.sistemaBBVA.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente">
+  <component name="RunManager" selected="JUnit.CompraServiceTest">
     <configuration name="CompraServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sistemaBBVA" />
       <extension name="coverage">
@@ -103,6 +99,22 @@
       <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
       <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CompraServiceTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompraServiceTest.listarComprasClienteTarjeta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sistemaBBVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CompraServiceTest" />
+      <option name="METHOD_NAME" value="listarComprasClienteTarjeta" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,7 +135,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PruebaTestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sistemaBBVA" />
       <extension name="coverage">
         <pattern>
@@ -132,23 +144,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
-      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.PruebaTestTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PruebaTestTest.whenPongoNumeroMenorACerothentiraException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sistemaBBVA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
-      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.PruebaTestTest" />
-      <option name="METHOD_NAME" value="whenPongoNumeroMenorACerothentiraException" />
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CompraServiceTest" />
+      <option name="METHOD_NAME" value="whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente" />
         <item itemvalue="JUnit.CompraServiceTest" />
+        <item itemvalue="JUnit.CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente" />
+        <item itemvalue="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente" />
+        <item itemvalue="JUnit.CompraServiceTest.listarComprasClienteTarjeta" />
         <item itemvalue="JUnit.PruebaTestTest.whenUsoGetNumBthenReciboNumB" />
-        <item itemvalue="JUnit.PruebaTestTest" />
-        <item itemvalue="JUnit.PruebaTestTest.whenPongoNumeroMenorACerothentiraException" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666472373153</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ACTUALIZACION: Guardo antes de hacer cambios">
+      <created>1666635995931</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666635995931</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,7 +296,9 @@
     <MESSAGE value="ACTUALIZACION: Delete y Creacion de Compra Service y Compra Controller" />
     <MESSAGE value="ACTUALIZACION(NO FUNCIONAN LOS TESTS): intento de creación de tests" />
     <MESSAGE value="ACTUALIZACION: Probando hacer tests con otro tutorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZACION: Probando hacer tests con otro tutorial" />
+    <MESSAGE value="ACTUALIZACION: Guardo antes de hacer cambios" />
+    <MESSAGE value="ACTUALIZACION: YA FUNCIONA!! (un test xD)" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZACION: YA FUNCIONA!! (un test xD)" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
