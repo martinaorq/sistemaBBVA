@@ -4,6 +4,7 @@ import com.martinacode.sistemaBBVA.model.Compra;
 import com.martinacode.sistemaBBVA.model.Persona;
 import com.martinacode.sistemaBBVA.model.Tarjeta;
 import com.martinacode.sistemaBBVA.repository.CompraRepo;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -37,26 +38,24 @@ class CompraServiceTest {
 
     @BeforeEach
     void setUp() {
+        service.setRepoCompra(repositorio);
     }
 
     @Test
     void whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente() {
 
         Persona martina= new Persona(1L,45079626L,"martina");
-        //Persona pepe= new Persona(2L,4507333L,"pepe");
 
         Compra compra1=new Compra();
         compra1.setId(1L);
         compra1.setPersona(martina);
 
-        /*Compra compra2=new Compra();
-        compra2.setId(2L);
-        compra2.setPersona(pepe);*/
+        service.getRepoCompra();
+        verify(service).getRepoCompra();
 
-        doReturn(asList(compra1)).when(service).listarComprasCliente(1L);
-
-        List<Compra> actual= service.listarComprasCliente(1L);
-        assertEquals(actual,asList(compra1));
+        doReturn(asList(compra1)).when(service).listarComprasCliente(anyLong());
+        List <Compra> compraActual= service.listarComprasCliente(anyLong());
+        assertEquals(service.listarComprasCliente(anyLong()),asList(compra1));
 
     }
 
@@ -68,22 +67,22 @@ class CompraServiceTest {
         Tarjeta tarjeta1=new Tarjeta();
         tarjeta1.setId(1L);
 
-        Tarjeta tarjeta2=new Tarjeta();
-        tarjeta2.setId(2L);
-
         Compra compra1=new Compra(); //compra1: tarjeta1, martina
         compra1.setId(1L);
         compra1.setPersona(martina);
         compra1.setTarjeta(tarjeta1);
 
-        Compra compra2=new Compra(); //compra2: tarjeta2, martina
-        compra2.setId(2L);
-        compra2.setPersona(martina);
-        compra1.setTarjeta(tarjeta2);
+        List <Compra> compras = asList(compra1);
 
+        doReturn(compras).when(service).listarComprasClienteTarjeta(anyLong(),anyLong());
+        List <Compra> compraActual= service.listarComprasClienteTarjeta(anyLong(),anyLong());
+        assertThat(service.listarComprasClienteTarjeta(anyLong(),anyLong())).isEqualTo(compras);
 
-        doReturn(asList(compra1)).when(service).listarComprasClienteTarjeta(1L,1L);
-        List<Compra> comprasTarjetaActual = service.listarComprasClienteTarjeta(1L,1L);
-        assertEquals(comprasTarjetaActual,asList(compra1));
+        doReturn(compras).when(service).listarComprasClienteTarjeta(1L,1L);
+        List <Compra> compraActual2= service.listarComprasClienteTarjeta(1L,1L);
+        assertThat(compraActual2).isEqualTo(compras);
+
+        verify(service).listarComprasClienteTarjeta(1L,1L);
+
     }
 }

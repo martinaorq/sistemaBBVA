@@ -13,6 +13,16 @@ import java.util.stream.Collectors;
 public class CompraService implements ICompraService{
     @Autowired
     private CompraRepo repoCompra;
+    public CompraService() {
+    }
+
+    public CompraRepo getRepoCompra() {
+        return repoCompra;
+    }
+
+    public void setRepoCompra(CompraRepo repoCompra) {
+        this.repoCompra = repoCompra;
+    }
 
     @Override
     public List<Compra> listarComprasCliente(Long idCliente) {
