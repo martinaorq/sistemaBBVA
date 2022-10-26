@@ -54,8 +54,9 @@ class CompraServiceTest {
         verify(service).getRepoCompra();
 
         doReturn(asList(compra1)).when(service).listarComprasCliente(anyLong());
-        List <Compra> compraActual= service.listarComprasCliente(anyLong());
-        assertEquals(service.listarComprasCliente(anyLong()),asList(compra1));
+        List <Compra> compraActual= service.listarComprasCliente(1L);
+        assertEquals(service.listarComprasCliente(1L),asList(compra1));
+
 
     }
 
@@ -72,15 +73,12 @@ class CompraServiceTest {
         compra1.setPersona(martina);
         compra1.setTarjeta(tarjeta1);
 
+        repositorio.save(compra1);
         List <Compra> compras = asList(compra1);
 
-        doReturn(compras).when(service).listarComprasClienteTarjeta(anyLong(),anyLong());
-        List <Compra> compraActual= service.listarComprasClienteTarjeta(anyLong(),anyLong());
-        assertThat(service.listarComprasClienteTarjeta(anyLong(),anyLong())).isEqualTo(compras);
-
         doReturn(compras).when(service).listarComprasClienteTarjeta(1L,1L);
-        List <Compra> compraActual2= service.listarComprasClienteTarjeta(1L,1L);
-        assertThat(compraActual2).isEqualTo(compras);
+        List <Compra> compraActual= service.listarComprasClienteTarjeta(1L,1L);
+        assertThat(compraActual).isEqualTo(compras);
 
         verify(service).listarComprasClienteTarjeta(1L,1L);
 
