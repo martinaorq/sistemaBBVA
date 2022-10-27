@@ -16,6 +16,10 @@ public class CompraService implements ICompraService{
     public CompraService() {
     }
 
+    public CompraService(CompraRepo repoCompra) {
+        this.repoCompra = repoCompra;
+    }
+
     public CompraRepo getRepoCompra() {
         return repoCompra;
     }

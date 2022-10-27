@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="ACTUALIZACION: no se que pasa con el RunWithCoverage">
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="ACTUALIZACION: Cambio Tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CompraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CompraService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CompraServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CompraServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,8 +175,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CompraServiceTest" />
-        <item itemvalue="JUnit.CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente" />
         <item itemvalue="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente" />
+        <item itemvalue="JUnit.CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente" />
         <item itemvalue="JUnit.CompraServiceTest.listarComprasClienteTarjeta" />
         <item itemvalue="JUnit.PruebaTestTest.whenUsoGetNumBthenReciboNumB" />
       </list>
@@ -288,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666811004441</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="ACTUALIZACION: Cambio Tests">
+      <created>1666812428283</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1666812428283</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,7 +326,8 @@
     <MESSAGE value="ACTUALIZACION: YA FUNCIONA!! (un test xD)" />
     <MESSAGE value="ACTUALIZACION: YA FUNCIONAN LOS DOS TESTS!! siuuuuuuuu!!" />
     <MESSAGE value="ACTUALIZACION: no se que pasa con el RunWithCoverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZACION: no se que pasa con el RunWithCoverage" />
+    <MESSAGE value="ACTUALIZACION: Cambio Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZACION: Cambio Tests" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -328,16 +337,19 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest.ic" NAME="CompraServiceTest Coverage Results" MODIFIED="1666811928164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest.ic" NAME="CompraServiceTest Coverage Results" MODIFIED="1666896638750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest_whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente.ic" NAME="CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente Coverage Results" MODIFIED="1666808959698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest_whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente.ic" NAME="CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente Coverage Results" MODIFIED="1666891761481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest_whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente.ic" NAME="CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente Coverage Results" MODIFIED="1666811560304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/sistemaBBVA$PruebaTestTest.ic" NAME="PruebaTestTest Coverage Results" MODIFIED="1666472107227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest.exec" NAME="CompraServiceTest Coverage Results" MODIFIED="1666812217473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
   </component>
