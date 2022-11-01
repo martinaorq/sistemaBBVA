@@ -11,6 +11,6 @@ import java.io.IOException;
 @Service
 public interface ICodigoQrService {
     CodigoQr generarCodigo(String texto, int ancho, int alto) throws IOException, WriterException;
-    Qr crearEntidadCodigoQr(double importe, String nombreQr, String nombreMercado);
+    Qr crearCodigoQr(double importe, String nombreQr, String nombreMercado);
     String consultarDatosQr(Qr codigoQr);
 }

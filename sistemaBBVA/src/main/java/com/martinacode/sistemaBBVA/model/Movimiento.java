@@ -11,6 +11,7 @@ public class Movimiento {
     private Long id;
     private String tipoDeMovimiento;
     private String metodoPago;
+    private Double importe;
     @OneToOne
     @JoinColumn(name = "codigo_qr_id")
     private Qr codigoQr;
@@ -30,6 +31,14 @@ public class Movimiento {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Double getImporte() {
+        return importe;
+    }
+
+    public void setImporte(Double importe) {
+        this.importe = importe;
     }
 
     public String getTipoDeMovimiento() {
@@ -86,6 +95,7 @@ public class Movimiento {
                 "id=" + id +
                 ", tipoDeMovimiento='" + tipoDeMovimiento + '\'' +
                 ", metodoPago='" + metodoPago + '\'' +
+                ", importe=" + importe +
                 ", codigoQr=" + codigoQr +
                 ", tarjetaPago=" + tarjetaPago +
                 ", emisorPago=" + emisorPago +

@@ -10,17 +10,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PagoQr implements IPagoQr {
+public class PagoQrService implements IPagoQrService {
     @Autowired
     private MovimientoRepo movimientoRepo;
     private static final String TIPO_DE_MOVIMIENTO= "QR";
 
     @Override
-    public String pagoConQr(String metodoPago, Qr codigoQr, Tarjeta tarjetaPago, Persona emisorPago, Persona receptorPago) {
+    public String pagoConQr(String metodoPago, Tarjeta tarjetaPago, Persona emisorPago, Persona receptorPago, Double importe) {
         Movimiento movimiento=new Movimiento();
         movimiento.setTipoDeMovimiento(TIPO_DE_MOVIMIENTO);
         movimiento.setMetodoPago(metodoPago);
-        movimiento.setCodigoQr(codigoQr);
+        // A CAMBIAR
+        movimiento.setCodigoQr(new CodigoQrService().crearCodigoQr(importe,"nombreQRACambiar",metodoPago));
         movimiento.setTarjetaPago(tarjetaPago);
         movimiento.setEmisorPago(emisorPago);
         movimiento.setReceptorPago(receptorPago);

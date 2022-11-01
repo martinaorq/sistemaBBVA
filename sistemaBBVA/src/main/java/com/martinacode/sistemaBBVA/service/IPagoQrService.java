@@ -6,6 +6,6 @@ import com.martinacode.sistemaBBVA.model.Tarjeta;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface IPagoQr {
-    String pagoConQr(String metodoPago, Qr codigoQr, Tarjeta tarjetaPago, Persona emisorPago, Persona receptorPago);
+public interface IPagoQrService {
+    String pagoConQr(String metodoPago, Tarjeta tarjetaPago, Persona emisorPago, Persona receptorPago, Double importe);
 }
