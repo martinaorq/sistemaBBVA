@@ -31,17 +31,19 @@ public class CompraService implements ICompraService{
     @Override
     public List<Compra> listarComprasCliente(Long idCliente) {
         List <Compra> lista = repoCompra.findAll();
-        return lista.stream()
+        List <Compra> listaResultado = lista.stream()
                 .filter(compra-> idCliente.equals(compra.getPersona().getId()))
                 .collect(Collectors.toList());
+        return listaResultado;
     }
 
     @Override
     public List<Compra> listarComprasClienteTarjeta(Long idCliente, Long idTarjeta) {
         List <Compra> lista = repoCompra.findAll();
-        return lista.stream()
+        List <Compra> listaResultado = lista.stream()
                 .filter(compra-> idCliente.equals(compra.getPersona().getId())&&idTarjeta.equals(compra.getTarjeta().getId()))
                 .collect(Collectors.toList());
+        return listaResultado;
     }
 
 

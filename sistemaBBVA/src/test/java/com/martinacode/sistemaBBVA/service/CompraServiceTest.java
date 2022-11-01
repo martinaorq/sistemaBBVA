@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.mockito.*;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.stubbing.Answer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
 import static org.junit.jupiter.api.Assertions.*;
@@ -28,7 +30,7 @@ import static org.mockito.Mockito.*;
 
 
 @DataJpaTest
-@ExtendWith(MockitoExtension.class)
+@RunWith(MockitoJUnitRunner.class)
 class CompraServiceTest {
 
     @InjectMocks
@@ -50,6 +52,7 @@ class CompraServiceTest {
     @BeforeEach
     void setUp() {
         service=Mockito.spy(new CompraService(repositorio));
+        repositorio= service.getRepoCompra();
 
         martina= new Persona(ID_CLIENTE,DNI_CLIENTE,NOMBRE_CLIENTE);
 
@@ -69,16 +72,21 @@ class CompraServiceTest {
     void name() {
         service.setRepoCompra(repositorio);
         service.getRepoCompra();
-        verify(service).getRepoCompra();
     }
 
     @Test
     void whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente() {
 
-        doReturn(compras).when(service).listarComprasCliente(anyLong());
+        doReturn(compras).when(service).listarComprasCliente(ID_CLIENTE);
         List <Compra> compraActual= service.listarComprasCliente(ID_CLIENTE);
         assertEquals(compraActual,compras);
         assertEquals(compraActual.get(0),compras.get(0));
+
+        doReturn(compras).when(service).listarComprasCliente(anyLong());
+        compraActual= service.listarComprasCliente(anyLong());
+        assertEquals(compraActual,compras);
+
+
 
     }
 
@@ -87,9 +95,9 @@ class CompraServiceTest {
 
         doReturn(compras).when(service).listarComprasClienteTarjeta(anyLong(),anyLong());
         List <Compra> compraActual= service.listarComprasClienteTarjeta(ID_CLIENTE,ID_TARJETA);
+        assertThat(compraActual.get(0).getPersona().getId()).isEqualTo(compras.get(0).getPersona().getId());
         assertThat(compraActual).isEqualTo(compras);
         assertThat(service.listarComprasClienteTarjeta(anyLong(),anyLong())).isEqualTo(compras);
-        verify(service).listarComprasClienteTarjeta(ID_CLIENTE,ID_TARJETA);
 
     }
 }

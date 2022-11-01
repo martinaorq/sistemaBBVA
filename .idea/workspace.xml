@@ -4,9 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="ACTUALIZACION: Cambio Tests">
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="ACTUALIZACION: Trabajando en Requerimiento! * Finalizadas entidades y service">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__classworlds_classworlds_1_1_alpha_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jai_imageio_jai_imageio_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_javase_3_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_doxia_doxia_sink_api_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_manager_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_api_2_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_repository_metadata_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_reporting_maven_reporting_api_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_shared_file_management_1_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_shared_maven_shared_io_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_provider_api_1_0_alpha_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_container_default_1_0_alpha_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_3_0_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jacoco_jacoco_maven_plugin_maven_plugin_0_8_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jacoco_org_jacoco_agent_runtime_0_8_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jacoco_org_jacoco_core_0_8_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jacoco_org_jacoco_report_0_8_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_analysis_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Movimiento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Qr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/CodigoQr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/Estado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/MovimientoRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CodigoQrService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/ICodigoQrService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/IPagoQr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/PagoQr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CompraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CompraService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/SistemaBbvaApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CompraServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CompraServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +54,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -63,6 +101,7 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Eithan/Downloads/sistemaBBVA/sistemaBBVA/src/test/resources&quot;
@@ -89,7 +128,7 @@
       <module name="sistemaBBVA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,7 +144,7 @@
       <module name="sistemaBBVA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,7 +160,7 @@
       <module name="sistemaBBVA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +172,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sistemaBBVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CompraServiceTest" />
+      <option name="METHOD_NAME" value="whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sistemaBBVA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,36 +204,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PruebaTestTest.whenUsoGetNumBthenReciboNumB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sistemaBBVA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
-      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.PruebaTestTest" />
-      <option name="METHOD_NAME" value="whenUsoGetNumBthenReciboNumB" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente2" />
       <item itemvalue="JUnit.CompraServiceTest" />
       <item itemvalue="JUnit.CompraServiceTest.listarComprasClienteTarjeta" />
       <item itemvalue="JUnit.CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente" />
       <item itemvalue="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente" />
-      <item itemvalue="JUnit.PruebaTestTest.whenUsoGetNumBthenReciboNumB" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CompraServiceTest" />
-        <item itemvalue="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente" />
+        <item itemvalue="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente2" />
         <item itemvalue="JUnit.CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente" />
+        <item itemvalue="JUnit.CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente" />
         <item itemvalue="JUnit.CompraServiceTest.listarComprasClienteTarjeta" />
-        <item itemvalue="JUnit.PruebaTestTest.whenUsoGetNumBthenReciboNumB" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666812428283</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ACTUALIZACION: Cambio Tests">
+      <created>1666896864863</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1666896864863</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -327,7 +373,8 @@
     <MESSAGE value="ACTUALIZACION: YA FUNCIONAN LOS DOS TESTS!! siuuuuuuuu!!" />
     <MESSAGE value="ACTUALIZACION: no se que pasa con el RunWithCoverage" />
     <MESSAGE value="ACTUALIZACION: Cambio Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZACION: Cambio Tests" />
+    <MESSAGE value="ACTUALIZACION: Trabajando en Requerimiento! * Finalizadas entidades y service" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIZACION: Trabajando en Requerimiento! * Finalizadas entidades y service" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -337,19 +384,22 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest.ic" NAME="CompraServiceTest Coverage Results" MODIFIED="1666896638750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest.ic" NAME="CompraServiceTest Coverage Results" MODIFIED="1667241676929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest_whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente2.ic" NAME="CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente2 Coverage Results" MODIFIED="1667239444787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest_whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente.ic" NAME="CompraServiceTest.whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente Coverage Results" MODIFIED="1666891761481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest_whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente.ic" NAME="CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente Coverage Results" MODIFIED="1666811560304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest_whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente.ic" NAME="CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente Coverage Results" MODIFIED="1667238540580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/sistemaBBVA$PruebaTestTest.ic" NAME="PruebaTestTest Coverage Results" MODIFIED="1666472107227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest.exec" NAME="CompraServiceTest Coverage Results" MODIFIED="1666812217473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest.exec" NAME="CompraServiceTest Coverage Results" MODIFIED="1667238690803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
   </component>
