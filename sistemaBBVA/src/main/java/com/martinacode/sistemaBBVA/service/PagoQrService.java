@@ -20,8 +20,7 @@ public class PagoQrService implements IPagoQrService {
         Movimiento movimiento=new Movimiento();
         movimiento.setTipoDeMovimiento(TIPO_DE_MOVIMIENTO);
         movimiento.setMetodoPago(metodoPago);
-        // A CAMBIAR
-        movimiento.setCodigoQr(new CodigoQrService().crearCodigoQr(importe,"nombreQRACambiar",metodoPago));
+        movimiento.setCodigoQr(new CodigoQrService().crearCodigoQr(importe, movimiento.getReceptorPago().getNombre(),metodoPago));
         movimiento.setTarjetaPago(tarjetaPago);
         movimiento.setEmisorPago(emisorPago);
         movimiento.setReceptorPago(receptorPago);

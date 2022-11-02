@@ -26,12 +26,13 @@ public class CodigoQrService implements ICodigoQrService {
     }
 
     @Override
-    public Qr crearCodigoQr(double importe, String nombreQr, String nombreMercado) {
+    public Qr crearCodigoQr(double importe, String nombrePersona, String nombreMercado) {
         Qr nuevoCodigo=new Qr();
-        String textForQr = nombreQr+nombreMercado+Double.toString(importe);
+        String textForQr = nombrePersona+nombreMercado+Double.toString(importe);
         nuevoCodigo.setCodigoQR(generarCodigo(textForQr,250,250));
         nuevoCodigo.setImporte(importe);
-        nuevoCodigo.setNombreQr(nombreQr);
+        //Nombre del que generó el Qr
+        nuevoCodigo.setNombreQr(nombrePersona+"QR");
         nuevoCodigo.setNombreMercado(nombreMercado);
         nuevoCodigo.setEstado(Estado.PENDIENTE);
         return nuevoCodigo;
