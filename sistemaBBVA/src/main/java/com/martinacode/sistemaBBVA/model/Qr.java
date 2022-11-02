@@ -1,13 +1,17 @@
 package com.martinacode.sistemaBBVA.model;
 
 
-import com.martinacode.sistemaBBVA.repository.CodigoQr;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.google.zxing.client.j2se.MatrixToImageConfig;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 import com.martinacode.sistemaBBVA.repository.Estado;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 
 @Entity
 public class Qr {
@@ -15,23 +19,44 @@ public class Qr {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-
-    private CodigoQr CodigoQR;
+    private byte[] codigoQr;
     private double importe;
     private String nombreQr;
     private String nombreMercado;
     private Estado estado;
 
     public Qr() {
+        this.estado = Estado.PENDIENTE;
     }
 
-    public Qr(Long id, CodigoQr codigoQR, double importe, String nombreQr, String nombreMercado, Estado estado) {
+    public Qr(Long id, double importe, String nombreQr, String nombreMercado, Estado estado) {
         this.id = id;
-        CodigoQR = codigoQR;
         this.importe = importe;
         this.nombreQr = nombreQr;
         this.nombreMercado = nombreMercado;
-        this.estado = estado;
+        this.codigoQr= generarCodigoQr();
+        this.estado = Estado.PENDIENTE;
+    }
+
+    public byte[] generarCodigoQr(){
+        QRCodeWriter qrCodeWriter = new QRCodeWriter();
+        BitMatrix bitMatrix = null;
+        try {
+            bitMatrix = qrCodeWriter.encode(nombreQr, BarcodeFormat.QR_CODE, 250, 250);
+        } catch (WriterException e) {
+            throw new RuntimeException(e);
+        }
+        ByteArrayOutputStream pngOutputStream = new ByteArrayOutputStream();
+        MatrixToImageConfig con = new MatrixToImageConfig( 0xFF000002 , 0xFFFFC041 ) ;
+
+        try {
+            MatrixToImageWriter.writeToStream(bitMatrix, "PNG", pngOutputStream,con);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        byte[] pngData = pngOutputStream.toByteArray();
+        this.codigoQr=pngData;
+        return pngData;
     }
 
     public Long getId() {
@@ -42,12 +67,12 @@ public class Qr {
         this.id = id;
     }
 
-    public CodigoQr getCodigoQR() {
-        return CodigoQR;
+    public byte[] getCodigoQR() {
+        return codigoQr;
     }
 
-    public void setCodigoQR(CodigoQr codigoQR) {
-        CodigoQR = codigoQR;
+    public void setCodigoQR() {
+        getCodigoQR();
     }
 
     public double getImporte() {
@@ -82,11 +107,13 @@ public class Qr {
         this.estado = estado;
     }
 
+
+
     @Override
     public String toString() {
         return "Qr{" +
                 "id=" + id +
-                ", CodigoQR=" + CodigoQR +
+                ", CodigoQR=" + codigoQr +
                 ", importe=" + importe +
                 ", nombreQr='" + nombreQr + '\'' +
                 ", nombreMercado='" + nombreMercado + '\'' +

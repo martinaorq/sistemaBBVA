@@ -1,6 +1,7 @@
 package com.martinacode.sistemaBBVA.model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 
 @Entity
@@ -12,18 +13,34 @@ public class Movimiento {
     private String tipoDeMovimiento;
     private String metodoPago;
     private Double importe;
-    @OneToOne
-    @JoinColumn(name = "codigo_qr_id")
+    private LocalDate fecha;
+    @ManyToOne
+    @JoinColumn
     private Qr codigoQr;
-    @OneToOne
-    @JoinColumn(name = "tarjeta_pago_id")
+    @ManyToOne
+    @JoinColumn
     private Tarjeta tarjetaPago;
-    @OneToOne
-    @JoinColumn(name = "emisor_pago_id")
+    @ManyToOne
+    @JoinColumn
     private Persona emisorPago;
-    @OneToOne
-    @JoinColumn(name = "receptor_pago_id")
+    @ManyToOne
+    @JoinColumn
     private Persona receptorPago;
+
+    public Movimiento() {
+    }
+
+    public Movimiento(Long id, String tipoDeMovimiento, String metodoPago, Double importe, LocalDate fecha, Qr codigoQr, Tarjeta tarjetaPago, Persona emisorPago, Persona receptorPago) {
+        this.id = id;
+        this.tipoDeMovimiento = tipoDeMovimiento;
+        this.metodoPago = metodoPago;
+        this.importe = importe;
+        this.fecha = fecha;
+        this.codigoQr = codigoQr;
+        this.tarjetaPago = tarjetaPago;
+        this.emisorPago = emisorPago;
+        this.receptorPago = receptorPago;
+    }
 
     public Long getId() {
         return id;
@@ -31,6 +48,14 @@ public class Movimiento {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
     }
 
     public Double getImporte() {
@@ -94,6 +119,7 @@ public class Movimiento {
         return "Movimiento{" +
                 "id=" + id +
                 ", tipoDeMovimiento='" + tipoDeMovimiento + '\'' +
+                ", fecha=" + fecha +
                 ", metodoPago='" + metodoPago + '\'' +
                 ", importe=" + importe +
                 ", codigoQr=" + codigoQr +

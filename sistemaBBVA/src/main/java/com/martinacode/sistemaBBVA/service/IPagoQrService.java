@@ -7,5 +7,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface IPagoQrService {
-    String pagoConQr(String metodoPago, Tarjeta tarjetaPago, Persona emisorPago, Persona receptorPago, Double importe);
+    String pagoConQr(Tarjeta tarjetaPago, Persona emisorPago, Persona receptorPago, Double importe);
 }
