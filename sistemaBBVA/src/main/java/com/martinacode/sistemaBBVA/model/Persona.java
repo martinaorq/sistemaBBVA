@@ -11,10 +11,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-@NoArgsConstructor
 @Entity
-@JsonIgnoreProperties({"movimientosPago","movimientosCobro"})
 public class Persona {
 
     @Id
@@ -23,15 +20,18 @@ public class Persona {
     private Long dni;
     private String nombre;
 
+    public Persona() {
+    }
+
     @OneToMany
     @JoinColumn
     private List<Tarjeta> tarjetas = new ArrayList<>();
 
-    @JsonBackReference
+    @JsonBackReference(value = "emisor")
     @OneToMany(mappedBy = "emisorPago")
     private List<Movimiento> movimientosPago = new ArrayList<>();
 
-    @JsonBackReference
+    @JsonBackReference(value = "receptor")
     @OneToMany(mappedBy = "receptorPago")
     private List<Movimiento> movimientosCobro = new ArrayList<>();
 
@@ -99,4 +99,16 @@ public class Persona {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", dni=" + dni +
+                ", nombre='" + nombre + '\'' +
+                ", tarjetas=" + tarjetas
+                /*", movimientosPago=" + movimientosPago +
+                ", movimientosCobro=" + movimientosCobro +
+                '}'*/
+                ;
+    }
 }

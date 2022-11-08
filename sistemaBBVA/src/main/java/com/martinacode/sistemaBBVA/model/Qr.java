@@ -15,8 +15,8 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Arrays;
 
-@Data
 @Entity
 public class Qr {
 
@@ -123,4 +123,16 @@ public class Qr {
         this.estado = estado;
     }
 
+    @Override
+    public String toString() {
+        return "Qr{" +
+                "id=" + id +
+                ", codigoQr=" + Arrays.toString(codigoQr) +
+                ", importe=" + importe +
+                ", nombreQr='" + nombreQr + '\'' +
+                ", nombreMercado='" + nombreMercado + '\'' +
+                ", estado=" + estado +
+                ", movimiento=" + movimiento +
+                '}';
+    }
 }

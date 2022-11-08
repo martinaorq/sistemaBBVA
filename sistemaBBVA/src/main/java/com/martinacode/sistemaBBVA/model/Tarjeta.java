@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-@Data
-@NoArgsConstructor
 @Entity
 public class Tarjeta {
 
@@ -59,4 +57,11 @@ public class Tarjeta {
         return "Se ha borrado el movimiento! [repositorio Tarjeta]";
     }
 
+    @Override
+    public String toString() {
+        return "Tarjeta{" +
+                "id=" + id +
+                ", numero='" + numero + '\'' +
+                ", entidad='" + entidad + '\'' ;
+    }
 }

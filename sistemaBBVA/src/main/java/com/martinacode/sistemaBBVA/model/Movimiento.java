@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Data
 @Entity
 public class Movimiento {
 
@@ -31,11 +30,11 @@ public class Movimiento {
     @ManyToOne
     @JoinColumn
     private Tarjeta tarjetaPago;
-    @JsonManagedReference
+    @JsonManagedReference(value = "emisor")
     @ManyToOne
     @JoinColumn
     private Persona emisorPago;
-    @JsonManagedReference
+    @JsonManagedReference(value = "receptor")
     @ManyToOne
     @JoinColumn
     private Persona receptorPago;
@@ -127,4 +126,18 @@ public class Movimiento {
         this.codigoQr = codigoQr;
     }
 
+    @Override
+    public String toString() {
+        return "Movimiento{" +
+                "id=" + id +
+                ", tipoDeMovimiento='" + tipoDeMovimiento + '\'' +
+                ", metodoPago='" + metodoPago + '\'' +
+                ", importe=" + importe +
+                ", fecha=" + fecha +
+                ", codigoQr=" + codigoQr +
+                ", tarjetaPago=" + tarjetaPago +
+                ", emisorPago=" + emisorPago +
+                ", receptorPago=" + receptorPago +
+                '}';
+    }
 }
