@@ -1,10 +1,14 @@
 package com.martinacode.sistemaBBVA.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+@Data
+@NoArgsConstructor
 @Entity
 public class Tarjeta {
 
@@ -14,13 +18,9 @@ public class Tarjeta {
     private String numero;
     private String entidad;
 
-    public Tarjeta(){}
-
-    public Tarjeta(Long id,String numero, String entidad) {
-        this.id=id;
-        this.numero = numero;
-        this.entidad = entidad;
-    }
+    @JsonBackReference
+    @OneToMany(mappedBy = "tarjetaPago")
+    private List<Movimiento> movimientos= new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -28,6 +28,14 @@ public class Tarjeta {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public List<Movimiento> getMovimientos() {
+        return movimientos;
+    }
+
+    public void setMovimientos(Movimiento movimiento) {
+        this.movimientos.add(movimiento);
     }
 
     public String getNumero() {
@@ -46,12 +54,9 @@ public class Tarjeta {
         this.entidad = entidad;
     }
 
-    @Override
-    public String toString() {
-        return "Tarjeta{" +
-                "id=" + id +
-                ", numero='" + numero + '\'' +
-                ", entidad='" + entidad + '\'' +
-                '}';
+    public String borrarMovimiento(Long id){
+        this.movimientos.remove(id);
+        return "Se ha borrado el movimiento! [repositorio Tarjeta]";
     }
+
 }

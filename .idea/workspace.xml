@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="Entidades y service terminado, Controller a probar v3">
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="Cambios: Funciona pago QR">
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/QrRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/Controlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/PagoQrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/PagoQrController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Movimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Movimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Persona.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Qr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Qr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/repository/CodigoQr.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CodigoQrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CodigoQrService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/ICodigoQrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/ICodigoQrService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Tarjeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Tarjeta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/IPagoQrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/IPagoQrService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/PagoQrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/PagoQrService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/PruebaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/PruebaTestTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +28,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -330,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667412703121</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Corrigiendo errores">
+      <created>1667423318733</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1667423318733</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -364,7 +372,9 @@
     <MESSAGE value="ACTUALIZACION: Trabajando en Requerimiento! * Finalizadas entidades y service" />
     <MESSAGE value="ACTUALIZACION: Trabajando en Requerimiento! * Finalizadas entidades y service v2" />
     <MESSAGE value="Entidades y service terminado, Controller a probar v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Entidades y service terminado, Controller a probar v3" />
+    <MESSAGE value="Corrigiendo errores" />
+    <MESSAGE value="Cambios: Funciona pago QR" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios: Funciona pago QR" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

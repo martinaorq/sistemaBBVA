@@ -1,9 +1,20 @@
 package com.martinacode.sistemaBBVA.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
+@Data
+@NoArgsConstructor
 @Entity
+@JsonIgnoreProperties({"movimientosPago","movimientosCobro"})
 public class Persona {
 
     @Id
@@ -14,14 +25,50 @@ public class Persona {
 
     @OneToMany
     @JoinColumn
-    private List<Tarjeta> tarjetas;
+    private List<Tarjeta> tarjetas = new ArrayList<>();
 
-    private Persona(){}
+    @JsonBackReference
+    @OneToMany(mappedBy = "emisorPago")
+    private List<Movimiento> movimientosPago = new ArrayList<>();
 
-    public Persona(Long id,Long dni, String nombre) {
-        this.id=id;
+    @JsonBackReference
+    @OneToMany(mappedBy = "receptorPago")
+    private List<Movimiento> movimientosCobro = new ArrayList<>();
+
+    public Persona(Long id, Long dni, String nombre) {
+        this.id = id;
         this.dni = dni;
         this.nombre = nombre;
+    }
+
+    public String borrarMovimientoCobro(Long id){
+        this.getMovimientosCobro().remove(id);
+        return "Se ha borrado el movimiento! [repositorio Persona:Receptor]";
+    }
+
+    public String borrarMovimientoPago(Long id){
+        this.getMovimientosPago().remove(id);
+        return "Se ha borrado el movimiento! [repositorio Persona:Emisor]";
+    }
+
+    public List<Movimiento> getMovimientosPago() {
+        return movimientosPago;
+    }
+
+    public void setMovimientosPago(Movimiento movimientoPago) {
+        this.movimientosPago.add(movimientoPago);
+    }
+
+    public List<Movimiento> getMovimientosCobro() {
+        return movimientosCobro;
+    }
+
+    public void setMovimientosCobro(Movimiento movimientoCobro) {
+        this.movimientosCobro.add(movimientoCobro);
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getDni() {
@@ -52,12 +99,4 @@ public class Persona {
         return id;
     }
 
-    @Override
-    public String toString() {
-        return "Persona{" +
-                "id=" + id +
-                ", dni=" + dni +
-                ", nombre='" + nombre + '\'' +
-                '}';
-    }
 }

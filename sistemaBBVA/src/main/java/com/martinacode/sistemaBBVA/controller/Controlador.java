@@ -70,4 +70,10 @@ public class Controlador {
         return "Se borró la compra correctamente";
     }
 
+    @DeleteMapping("/borrarPersona")
+    public String eliminarPersonacompra(@RequestParam(name="id")Long id){
+        repoPersona.deleteById(id);
+        return "Se borró la persona correctamente";
+    }
+
 }

@@ -1,9 +1,18 @@
 package com.martinacode.sistemaBBVA.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.martinacode.sistemaBBVA.repository.PersonaRepo;
+import com.martinacode.sistemaBBVA.repository.TarjetaRepo;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
-
+@Data
 @Entity
 public class Movimiento {
 
@@ -14,15 +23,19 @@ public class Movimiento {
     private String metodoPago;
     private Double importe;
     private LocalDate fecha;
-    @ManyToOne
+    @JsonManagedReference
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn
     private Qr codigoQr;
+    @JsonManagedReference
     @ManyToOne
     @JoinColumn
     private Tarjeta tarjetaPago;
+    @JsonManagedReference
     @ManyToOne
     @JoinColumn
     private Persona emisorPago;
+    @JsonManagedReference
     @ManyToOne
     @JoinColumn
     private Persona receptorPago;
@@ -95,7 +108,7 @@ public class Movimiento {
     }
 
     public void setEmisorPago(Persona emisorPago) {
-        this.emisorPago = emisorPago;
+        this.emisorPago = this.emisorPago= emisorPago;
     }
 
     public Tarjeta getTarjetaPago() {
@@ -114,18 +127,4 @@ public class Movimiento {
         this.codigoQr = codigoQr;
     }
 
-    @Override
-    public String toString() {
-        return "Movimiento{" +
-                "id=" + id +
-                ", tipoDeMovimiento='" + tipoDeMovimiento + '\'' +
-                ", fecha=" + fecha +
-                ", metodoPago='" + metodoPago + '\'' +
-                ", importe=" + importe +
-                ", codigoQr=" + codigoQr +
-                ", tarjetaPago=" + tarjetaPago +
-                ", emisorPago=" + emisorPago +
-                ", receptorPago=" + receptorPago +
-                '}';
-    }
 }

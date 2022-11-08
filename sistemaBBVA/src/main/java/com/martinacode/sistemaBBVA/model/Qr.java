@@ -1,6 +1,8 @@
 package com.martinacode.sistemaBBVA.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageConfig;
@@ -8,11 +10,13 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.martinacode.sistemaBBVA.repository.Estado;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
+@Data
 @Entity
 public class Qr {
 
@@ -24,6 +28,10 @@ public class Qr {
     private String nombreQr;
     private String nombreMercado;
     private Estado estado;
+
+    @OneToOne(mappedBy="codigoQr")
+    @JsonBackReference
+    private Movimiento movimiento;
 
     public Qr() {
         this.estado = Estado.PENDIENTE;
@@ -67,12 +75,20 @@ public class Qr {
         this.id = id;
     }
 
+    public Movimiento getMovimiento() {
+        return movimiento;
+    }
+
+    public void setMovimiento(Movimiento movimiento) {
+        this.movimiento = movimiento;
+    }
+
     public byte[] getCodigoQR() {
         return codigoQr;
     }
 
     public void setCodigoQR() {
-        getCodigoQR();
+        generarCodigoQr();
     }
 
     public double getImporte() {
@@ -107,17 +123,4 @@ public class Qr {
         this.estado = estado;
     }
 
-
-
-    @Override
-    public String toString() {
-        return "Qr{" +
-                "id=" + id +
-                ", CodigoQR=" + codigoQr +
-                ", importe=" + importe +
-                ", nombreQr='" + nombreQr + '\'' +
-                ", nombreMercado='" + nombreMercado + '\'' +
-                ", estado=" + estado +
-                '}';
-    }
 }
