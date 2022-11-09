@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="Cambios: Funcion borrar movimiento y permite ver movimientos">
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="Cambios: Solucionado agregar tarjetas, personas, borrado de movimientos, agregar movimientos y ver movimientos">
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/IMovimientoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/MovimientoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/resources/codigoqr.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/PagoQrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/controller/PagoQrController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Movimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Movimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Qr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Qr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Tarjeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Tarjeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/IPagoQrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/IPagoQrService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/PagoQrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/PagoQrService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +24,9 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -61,16 +65,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eithan/Downloads/sistemaBBVA/sistemaBBVA/src/test/resources&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/Eithan/Downloads/sistemaBBVA/sistemaBBVA/src/test/resources"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Eithan\Downloads\sistemaBBVA\sistemaBBVA\src\test\resources" />
@@ -338,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667936871067</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Cambios: Solucionado agregar tarjetas, personas, borrado de movimientos, agregar movimientos y ver movimientos">
+      <created>1667938032618</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667938032618</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -375,7 +387,8 @@
     <MESSAGE value="Corrigiendo errores" />
     <MESSAGE value="Cambios: Funciona pago QR" />
     <MESSAGE value="Cambios: Funcion borrar movimiento y permite ver movimientos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios: Funcion borrar movimiento y permite ver movimientos" />
+    <MESSAGE value="Cambios: Solucionado agregar tarjetas, personas, borrado de movimientos, agregar movimientos y ver movimientos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios: Solucionado agregar tarjetas, personas, borrado de movimientos, agregar movimientos y ver movimientos" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

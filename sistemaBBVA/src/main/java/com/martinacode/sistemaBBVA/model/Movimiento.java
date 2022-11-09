@@ -19,6 +19,7 @@ public class Movimiento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String tipoDeMovimiento;
+    private String descripcion;
     private String metodoPago;
     private Double importe;
     private LocalDate fecha;
@@ -84,6 +85,14 @@ public class Movimiento {
 
     public void setTipoDeMovimiento(String tipoDeMovimiento) {
         this.tipoDeMovimiento = tipoDeMovimiento;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getMetodoPago() {

@@ -27,7 +27,7 @@ public class PagoQrController {
     @PostMapping("/pago-qr")
     @Transactional
     public String realizarPagoConQr(@RequestBody Movimiento m){
-        String pagoRealizado= service.pagoConQr(m.getTarjetaPago().getId(),m.getEmisorPago().getId(),m.getReceptorPago().getId(),m.getImporte());
+        String pagoRealizado= service.pagoRealizadoConQr(m.getTarjetaPago().getId(),m.getEmisorPago().getId(),m.getReceptorPago().getId(),m.getImporte());
         //String pagoRealizado= m.getTarjetaPago()+m.getEmisorPago().toString()+m.getReceptorPago().toString()+Double.toString(m.getImporte());
         return pagoRealizado;
     }

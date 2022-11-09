@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.Optional;
 
 @Service
 public class PagoQrService implements IPagoQrService {
@@ -27,7 +26,7 @@ public class PagoQrService implements IPagoQrService {
     private static final String METODO_PAGO= "QR";
 
     @Override
-    public String pagoConQr(Long tarjetaPago,Long emisorPago,Long receptorPago, Double importe) {
+    public String pagoRealizadoConQr(Long tarjetaPago,Long emisorPago,Long receptorPago, Double importe) {
         Movimiento mov=new Movimiento();
         Persona emisor=personaRepo.getReferenceById(emisorPago);
         emisor.setMovimientosPago(mov);
