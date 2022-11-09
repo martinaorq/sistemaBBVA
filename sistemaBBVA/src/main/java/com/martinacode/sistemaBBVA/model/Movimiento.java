@@ -41,6 +41,7 @@ public class Movimiento {
     private Persona receptorPago;
 
     public Movimiento() {
+        fecha= LocalDate.now();
     }
 
     public Movimiento(Long id, String tipoDeMovimiento, String metodoPago, Double importe, LocalDate fecha, Qr codigoQr, Tarjeta tarjetaPago, Persona emisorPago, Persona receptorPago) {
@@ -48,7 +49,7 @@ public class Movimiento {
         this.tipoDeMovimiento = tipoDeMovimiento;
         this.metodoPago = metodoPago;
         this.importe = importe;
-        this.fecha = fecha;
+        this.fecha = LocalDate.now();
         this.codigoQr = codigoQr;
         this.tarjetaPago = tarjetaPago;
         this.emisorPago = emisorPago;

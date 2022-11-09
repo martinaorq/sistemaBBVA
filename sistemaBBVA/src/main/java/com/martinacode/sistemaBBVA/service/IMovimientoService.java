@@ -8,6 +8,9 @@ import java.util.List;
 
 @Service
 public interface IMovimientoService {
+
+    public String eliminarMovimiento(Long idMovimiento);
+    String insertarMovimiento(Movimiento m);
     List<Movimiento> listarMovimientoCliente(Long idCliente);
     List<Movimiento> listarMovimientoClienteTarjeta(Long idCliente,Long idTarjeta);
 }

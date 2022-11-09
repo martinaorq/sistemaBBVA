@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Entity
 public class Persona {
@@ -46,7 +48,7 @@ public class Persona {
         return "Se ha borrado el movimiento! [repositorio Persona:Receptor]";
     }
 
-    public String borrarMovimientoPago(Long id){
+    public String borrarMovimientoPago(Long id) {
         this.getMovimientosPago().remove(id);
         return "Se ha borrado el movimiento! [repositorio Persona:Emisor]";
     }

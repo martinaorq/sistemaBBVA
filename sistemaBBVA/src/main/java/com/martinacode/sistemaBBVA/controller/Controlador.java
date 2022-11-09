@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 public class Controlador {
-    Logger logger = LoggerFactory.getLogger(Controlador.class);
+    //Logger logger = LoggerFactory.getLogger(Controlador.class);
 
     @Autowired
     private TarjetaRepo repoTarjeta;
