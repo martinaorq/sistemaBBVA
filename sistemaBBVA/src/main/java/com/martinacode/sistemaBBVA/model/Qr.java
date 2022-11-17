@@ -15,6 +15,8 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import java.util.Arrays;
 
 @Entity
@@ -65,6 +67,23 @@ public class Qr {
         byte[] pngData = pngOutputStream.toByteArray();
         this.codigoQr=pngData;
         return pngData;
+    }
+
+    public String generarImagenQr(String filePath) {
+        QRCodeWriter qrCodeWriter = new QRCodeWriter();
+        BitMatrix bitMatrix = null;
+        try {
+            bitMatrix = qrCodeWriter.encode(nombreQr, BarcodeFormat.QR_CODE, 250, 250);
+        } catch (WriterException e) {
+            throw new RuntimeException(e);
+        }
+        Path path = FileSystems.getDefault().getPath(filePath);
+        try {
+            MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return filePath;
     }
 
     public Long getId() {
