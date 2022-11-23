@@ -36,68 +36,23 @@ class CompraServiceTest {
     @InjectMocks
     @Spy
     private CompraService service;
-    @Mock
-    private CompraRepo repositorio;
 
-    private Persona martina;
-    private Tarjeta tarjeta;
-    private Compra compra;
-    private List <Compra> compras;
+    @Test
+    void when2LlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente(){
+        CompraRepo cr= new CompraRepoStub();
+        CompraService serviceCompra = new CompraService(cr);
 
-    private static final Long ID_CLIENTE = 1L;
-    private static final Long ID_TARJETA=1L;
-    private static final Long DNI_CLIENTE=45079626L;
-    private static final String NOMBRE_CLIENTE="martina";
-
-    @BeforeEach
-    void setUp() {
-        service=Mockito.spy(new CompraService(repositorio));
-        repositorio= service.getRepoCompra();
-
-        martina= new Persona(ID_CLIENTE,DNI_CLIENTE,NOMBRE_CLIENTE);
-
-        tarjeta=new Tarjeta();
-        tarjeta.setId(ID_TARJETA);
-
-        compra=new Compra(); //compra1: tarjeta1, martina
-        compra.setId(1L);
-        compra.setPersona(martina);
-        compra.setTarjeta(tarjeta);
-
-        compras= asList(compra);
-
+        assertEquals(3, serviceCompra.listarComprasCliente(1L).size());
+        assertEquals(1, serviceCompra.listarComprasCliente(2L).size());
     }
 
     @Test
-    void name() {
-        service.setRepoCompra(repositorio);
-        service.getRepoCompra();
-    }
+    void when2listarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente(){
+        CompraRepo cr= new CompraRepoStub();
+        CompraService serviceCompra = new CompraService(cr);
 
-    @Test
-    void whenLlamolistarComprasClienteThenMeDevuelveListadeUnSoloCliente() {
-
-        doReturn(compras).when(service).listarComprasCliente(ID_CLIENTE);
-        List <Compra> compraActual= service.listarComprasCliente(ID_CLIENTE);
-        assertEquals(compraActual,compras);
-        assertEquals(compraActual.get(0),compras.get(0));
-
-        doReturn(compras).when(service).listarComprasCliente(anyLong());
-        compraActual= service.listarComprasCliente(anyLong());
-        assertEquals(compraActual,compras);
-
-
-
-    }
-
-    @Test
-    void whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente() {
-
-        doReturn(compras).when(service).listarComprasClienteTarjeta(anyLong(),anyLong());
-        List <Compra> compraActual= service.listarComprasClienteTarjeta(ID_CLIENTE,ID_TARJETA);
-        assertThat(compraActual.get(0).getPersona().getId()).isEqualTo(compras.get(0).getPersona().getId());
-        assertThat(compraActual).isEqualTo(compras);
-        assertThat(service.listarComprasClienteTarjeta(anyLong(),anyLong())).isEqualTo(compras);
-
+        assertEquals(2, serviceCompra.listarComprasClienteTarjeta(1L,1L).size());
+        assertEquals(1, serviceCompra.listarComprasClienteTarjeta(1L,2L).size());
+        assertEquals(1, serviceCompra.listarComprasClienteTarjeta(2L,3L).size());
     }
 }

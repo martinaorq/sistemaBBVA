@@ -20,6 +20,15 @@ public class Tarjeta {
     @OneToMany(mappedBy = "tarjetaPago")
     private List<Movimiento> movimientos= new ArrayList<>();
 
+    public Tarjeta() {
+    }
+
+    public Tarjeta(Long id, String numero, String entidad) {
+        this.id = id;
+        this.numero = numero;
+        this.entidad = entidad;
+    }
+
     public Long getId() {
         return id;
     }

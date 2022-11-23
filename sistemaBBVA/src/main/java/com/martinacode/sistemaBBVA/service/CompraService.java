@@ -20,14 +20,6 @@ public class CompraService implements ICompraService{
         this.repoCompra = repoCompra;
     }
 
-    public CompraRepo getRepoCompra() {
-        return repoCompra;
-    }
-
-    public void setRepoCompra(CompraRepo repoCompra) {
-        this.repoCompra = repoCompra;
-    }
-
     @Override
     public List<Compra> listarComprasCliente(Long idCliente) {
         List <Compra> lista = repoCompra.findAll();
