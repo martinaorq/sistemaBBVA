@@ -144,7 +144,7 @@ public class Movimiento {
                 ", metodoPago='" + metodoPago + '\'' +
                 ", importe=" + importe +
                 ", fecha=" + fecha +
-                ", codigoQr=" + codigoQr +
+                //", codigoQr=" + codigoQr +
                 ", tarjetaPago=" + tarjetaPago +
                 ", emisorPago=" + emisorPago +
                 ", receptorPago=" + receptorPago +

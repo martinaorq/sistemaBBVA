@@ -22,9 +22,6 @@ import java.time.LocalDate;
 public class PagoQrService implements IPagoQrService {
 
     @Autowired
-    private ResourceLoader resourceloader;
-
-    @Autowired
     private MovimientoRepo movimientoRepo;
     @Autowired
     private TarjetaRepo tarjetaRepo;
@@ -38,12 +35,15 @@ public class PagoQrService implements IPagoQrService {
     @Override
     public String pagoRealizadoConQr(Long tarjetaPago,Long emisorPago,Long receptorPago, Double importe) {
         Movimiento mov=new Movimiento();
+
         Persona emisor=personaRepo.getReferenceById(emisorPago);
-        emisor.setMovimientosPago(mov);
         Persona receptor=personaRepo.getReferenceById(receptorPago);
-        receptor.setMovimientosCobro(mov);
         Tarjeta tarjeta=tarjetaRepo.getReferenceById(tarjetaPago);
+
+        emisor.setMovimientosPago(mov);
+        receptor.setMovimientosCobro(mov);
         tarjeta.setMovimientos(mov);
+
         mov.setTipoDeMovimiento("Pago con QR");
         mov.setMetodoPago(METODO_PAGO);
         mov.setTarjetaPago(tarjeta);
@@ -53,19 +53,21 @@ public class PagoQrService implements IPagoQrService {
         mov.setFecha(LocalDate.now());
         mov.setCodigoQr(service.nuevoCodigoQr(importe, receptor.getNombre(),METODO_PAGO));
         mov.getCodigoQr().setEstado(Estado.CERRADO);
-
         movimientoRepo.save(mov);
-        return "Pago QR realizado!"+ mov.toString();
+        return "Pago QR realizado!";
     }
-    /* FUNCIONA: usa una sola imagen
+
     public Movimiento iniciarPagoQr(Long tarjetaPago, Long emisorPago, Long receptorPago, Double importe) throws IOException {
         Movimiento mov=new Movimiento();
+
         Persona emisor=personaRepo.getReferenceById(emisorPago);
-        emisor.setMovimientosPago(mov);
         Persona receptor=personaRepo.getReferenceById(receptorPago);
-        receptor.setMovimientosCobro(mov);
         Tarjeta tarjeta=tarjetaRepo.getReferenceById(tarjetaPago);
+
+        emisor.setMovimientosPago(mov);
+        receptor.setMovimientosCobro(mov);
         tarjeta.setMovimientos(mov);
+
         mov.setTipoDeMovimiento("Pago con QR");
         mov.setMetodoPago(METODO_PAGO);
         mov.setTarjetaPago(tarjeta);
@@ -75,41 +77,7 @@ public class PagoQrService implements IPagoQrService {
         mov.setFecha(LocalDate.now());
         mov.setCodigoQr(service.nuevoCodigoQr(importe, receptor.getNombre(),METODO_PAGO));
 
-        final Resource imagen= resourceloader.getResource("classpath:static/qrcode.png");
-        File file = imagen.getFile();
-        String absolutePath = file.getAbsolutePath();
-        String path= mov.getCodigoQr().generarImagenQr(absolutePath);
-        //Descripcion del movimiento tiene el path del codigo QR para ver si se esta haciendo bien
-        mov.setDescripcion(path);
-        movimientoRepo.save(mov);
-        return mov;
-    }
-    */
-    //Intento de que haga muchas imagenes y despues las borre
-
-    public Movimiento iniciarPagoQr(Long tarjetaPago, Long emisorPago, Long receptorPago, Double importe) throws IOException {
-        Movimiento mov=new Movimiento();
-        Persona emisor=personaRepo.getReferenceById(emisorPago);
-        emisor.setMovimientosPago(mov);
-        Persona receptor=personaRepo.getReferenceById(receptorPago);
-        receptor.setMovimientosCobro(mov);
-        Tarjeta tarjeta=tarjetaRepo.getReferenceById(tarjetaPago);
-        tarjeta.setMovimientos(mov);
-        mov.setTipoDeMovimiento("Pago con QR");
-        mov.setMetodoPago(METODO_PAGO);
-        mov.setTarjetaPago(tarjeta);
-        mov.setEmisorPago(emisor);
-        mov.setReceptorPago(receptor);
-        mov.setImporte(importe);
-        mov.setFecha(LocalDate.now());
-        mov.setCodigoQr(service.nuevoCodigoQr(importe, receptor.getNombre(),METODO_PAGO));
-
-        final Resource imagen= resourceloader.getResource("classpath:static/qrcode.png");
-        File file = imagen.getFile();
-        String absolutePath = file.getAbsolutePath();
-        String absolutePath2= absolutePath.replace("qrcode.png","qrcode"+Long.toString(mov.getCodigoQr().getId())+".png");
-        String path= mov.getCodigoQr().generarImagenQr(absolutePath2);
-        //Descripcion del movimiento tiene el path del codigo QR para ver si se esta haciendo bien
+        String path= service.generarImagenQr(mov.getCodigoQr());
         mov.setDescripcion(path);
         movimientoRepo.save(mov);
         return mov;
@@ -135,4 +103,7 @@ public class PagoQrService implements IPagoQrService {
         return "Se ha eliminado el movimiento por completo!";
     }
 
+    public void setMovimientoRepo(MovimientoRepo movimientoRepo) {
+        this.movimientoRepo = movimientoRepo;
+    }
 }

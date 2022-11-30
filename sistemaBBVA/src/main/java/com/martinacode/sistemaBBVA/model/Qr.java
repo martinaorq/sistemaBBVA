@@ -39,52 +39,15 @@ public class Qr {
         this.estado = Estado.PENDIENTE;
     }
 
-    public Qr(Long id, double importe, String nombreQr, String nombreMercado, Estado estado) {
+    public Qr(Long id, double importe, String nombreQr, String nombreMercado, Estado estado, byte[] codigoQr) {
         this.id = id;
         this.importe = importe;
         this.nombreQr = nombreQr;
         this.nombreMercado = nombreMercado;
-        this.codigoQr= generarCodigoQr();
+        this.codigoQr= codigoQr;
         this.estado = Estado.PENDIENTE;
     }
 
-    public byte[] generarCodigoQr(){
-        QRCodeWriter qrCodeWriter = new QRCodeWriter();
-        BitMatrix bitMatrix = null;
-        try {
-            bitMatrix = qrCodeWriter.encode(nombreQr, BarcodeFormat.QR_CODE, 250, 250);
-        } catch (WriterException e) {
-            throw new RuntimeException(e);
-        }
-        ByteArrayOutputStream pngOutputStream = new ByteArrayOutputStream();
-        MatrixToImageConfig con = new MatrixToImageConfig( 0xFF000002 , 0xFFFFC041 ) ;
-
-        try {
-            MatrixToImageWriter.writeToStream(bitMatrix, "PNG", pngOutputStream,con);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        byte[] pngData = pngOutputStream.toByteArray();
-        this.codigoQr=pngData;
-        return pngData;
-    }
-
-    public String generarImagenQr(String filePath) {
-        QRCodeWriter qrCodeWriter = new QRCodeWriter();
-        BitMatrix bitMatrix = null;
-        try {
-            bitMatrix = qrCodeWriter.encode(nombreQr, BarcodeFormat.QR_CODE, 250, 250);
-        } catch (WriterException e) {
-            throw new RuntimeException(e);
-        }
-        Path path = FileSystems.getDefault().getPath(filePath);
-        try {
-            MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return filePath;
-    }
 
     public Long getId() {
         return id;
@@ -106,8 +69,8 @@ public class Qr {
         return codigoQr;
     }
 
-    public void setCodigoQR() {
-        generarCodigoQr();
+    public void setCodigoQR(byte[] codigoQr) {
+        this.codigoQr=codigoQr;
     }
 
     public double getImporte() {
@@ -146,7 +109,7 @@ public class Qr {
     public String toString() {
         return "Qr{" +
                 "id=" + id +
-                ", codigoQr=" + Arrays.toString(codigoQr) +
+                //", codigoQr=" + Arrays.toString(codigoQr) +
                 ", importe=" + importe +
                 ", nombreQr='" + nombreQr + '\'' +
                 ", nombreMercado='" + nombreMercado + '\'' +
