@@ -6,13 +6,18 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.martinacode.sistemaBBVA.model.Qr;
+import com.martinacode.sistemaBBVA.repository.QrRepo;
 import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.mockito.quality.Strictness;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
@@ -33,10 +38,15 @@ import static org.mockito.Mockito.*;
 class CodigoQrServiceTest {
 
     @InjectMocks
+    @Spy
     CodigoQrService service;
 
     @Mock
     Qr qrCode;
+
+    @Mock
+    QrRepo qrRepo;
+
 
     String mockFile;
     InputStream is;
@@ -45,8 +55,10 @@ class CodigoQrServiceTest {
 
     @Before
     void setup(){
-        qrCode.setNombreQr("Codigo");
-        qrCode.setId(3L);
+        qrCode.setNombreQr("CodigoQR");
+        qrCode.setId(1L);
+        qrCode.setImporte(203.3);
+        qrCode.setNombreMercado("Mastercard");
     }
 
     @BeforeEach
@@ -57,23 +69,54 @@ class CodigoQrServiceTest {
         mockResource= mock(Resource.class);
 
         service.setResourceloader(resourceLoader);
+        service.setQrRepo(qrRepo);
     }
 
     @Test
     void nuevoCodigoQr() {
         Qr nuevoQr= service.nuevoCodigoQr(203.3,"pepe","Mastercard");
         assertNotEquals(null, nuevoQr);
-        assertEquals(nuevoQr.getNombreMercado(),"Martercard");
+        assertEquals(nuevoQr.getNombreMercado(),"Mastercard");
     }
 
     @Test
     void generarCodigoQr() {
+        doReturn("NombreQr").when(qrCode).getNombreQr();
+        byte[] resultado= service.generarCodigoQr(qrCode);
+        assertNotEquals(null,resultado);
     }
 
     @Test
     void generarImagenQr() throws IOException, WriterException {
+        doReturn("NombreQr").when(qrCode).getNombreQr();
+        doReturn("path").when(service).getIdPath(anyString());
+        String resultado= service.generarImagenQr(qrCode);
+        assertNotEquals(0,resultado.length());
+    }
 
+    @Test
+    void generarImagenQrThrowsWriterException() throws WriterException {
+        doReturn("NombreQr").when(qrCode).getNombreQr();
+        doReturn("path").when(service).getIdPath(anyString());
+        QRCodeWriter qrCodeWriter=spy(QRCodeWriter.class);
+        service.setQrCodeWriter(qrCodeWriter);
+        doThrow((WriterException.class)).when(qrCodeWriter).encode(anyString(),any(),anyInt(),anyInt());
+        assertThrows(EncodeException.class,()->service.generarImagenQr(qrCode));
+    }
 
+    @Test
+    void generarImagenQrThrowsIOException() throws IOException, WriterException {
+        /*doReturn("NombreQr").when(qrCode).getNombreQr();
+        doReturn("path").when(service).getIdPath(anyString());
+
+        BitMatrix bm=new BitMatrix(1);
+        QRCodeWriter qrCodeWriter=spy(QRCodeWriter.class);
+        service.setQrCodeWriter(qrCodeWriter);
+        doReturn(bm).when(qrCodeWriter).encode(anyString(),any(),anyInt(),anyInt());
+        MatrixToImageWriter matrixToImageWriter=mock(MatrixToImageWriter.class);
+
+        doThrow(IOException.class).when(matrixToImageWriter).writeToPath(any(),any(),any());
+        assertThrows(WriteToPathException.class,()->service.generarImagenQr(qrCode));*/
     }
 
     @Test
@@ -95,6 +138,8 @@ class CodigoQrServiceTest {
 
     @Test
     void consultarDatosQr() {
+        String resultado = service.consultarDatosQr(qrCode);
+        assertNotEquals(0,resultado.length());
     }
 
 }

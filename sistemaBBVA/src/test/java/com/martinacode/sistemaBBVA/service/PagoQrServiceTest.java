@@ -58,8 +58,6 @@ class PagoQrServiceTest {
         persona2=new Persona(2L,34567773L,"Lautaro");
         tarjeta1=new Tarjeta(1L,"5305754015298832","VISA");
 
-        codigoQr1=new Qr();
-
         mov=new Movimiento();
         mov.setId(1L);
         mov.setTipoDeMovimiento("Pago con QR");
@@ -71,6 +69,7 @@ class PagoQrServiceTest {
         mov.setFecha(LocalDate.now());
         mov.setDescripcion("path");
 
+        codigoQr1=new Qr();
         codigoQr1.setId(1L);
         codigoQr1.setMovimiento(mov);
         codigoQr1.setImporte(mov.getImporte());

@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="Actualizacion: Mejora en los tests, epico!">
-      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/model/QrTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CodigoQrServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/PagoQrServiceTest.java" afterDir="false" />
+    <list default="true" id="fd8c0a60-11e6-4aa0-aa97-f720c031fd2e" name="Changes" comment="Actualizacion: Nuevos Test CodigoQRService y PagoQrService">
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/EncodeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/WriteToPathException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Movimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Movimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Qr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/model/Qr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CodigoQrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/CodigoQrService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/ICodigoQrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/ICodigoQrService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/PagoQrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/main/java/com/martinacode/sistemaBBVA/service/PagoQrService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CodigoQrServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/CodigoQrServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/PagoQrServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemaBBVA/src/test/java/com/martinacode/sistemaBBVA/service/PagoQrServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +23,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -105,7 +101,7 @@
       <recent name="com.martinacode.sistemaBBVA.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CodigoQrServiceTest">
+  <component name="RunManager" selected="JUnit.CodigoQrServiceTest.generarImagenQrThrowsIOException">
     <configuration name="CodigoQrServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sistemaBBVA" />
       <extension name="coverage">
@@ -121,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PagoQrServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CodigoQrServiceTest.generarCodigoQr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sistemaBBVA" />
       <extension name="coverage">
         <pattern>
@@ -130,29 +126,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
-      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.PagoQrServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PagoQrServiceTest.finalizarPagoQr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sistemaBBVA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
-      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.PagoQrServiceTest" />
-      <option name="METHOD_NAME" value="finalizarPagoQr" />
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CodigoQrServiceTest" />
+      <option name="METHOD_NAME" value="generarCodigoQr" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PagoQrServiceTest.iniciarPagoQr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CodigoQrServiceTest.generarImagenQrThrowsIOException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sistemaBBVA" />
       <extension name="coverage">
         <pattern>
@@ -161,14 +142,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
-      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.PagoQrServiceTest" />
-      <option name="METHOD_NAME" value="iniciarPagoQr" />
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CodigoQrServiceTest" />
+      <option name="METHOD_NAME" value="generarImagenQrThrowsIOException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PagoQrServiceTest.pagoRealizadoConQr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CodigoQrServiceTest.generarImagenQrThrowsWriterException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sistemaBBVA" />
       <extension name="coverage">
         <pattern>
@@ -177,27 +158,43 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
-      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.PagoQrServiceTest" />
-      <option name="METHOD_NAME" value="pagoRealizadoConQr" />
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CodigoQrServiceTest" />
+      <option name="METHOD_NAME" value="generarImagenQrThrowsWriterException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CodigoQrServiceTest.nuevoCodigoQr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sistemaBBVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.martinacode.sistemaBBVA.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.martinacode.sistemaBBVA.service" />
+      <option name="MAIN_CLASS_NAME" value="com.martinacode.sistemaBBVA.service.CodigoQrServiceTest" />
+      <option name="METHOD_NAME" value="nuevoCodigoQr" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.PagoQrServiceTest" />
-      <item itemvalue="JUnit.PagoQrServiceTest.finalizarPagoQr" />
-      <item itemvalue="JUnit.PagoQrServiceTest.iniciarPagoQr" />
-      <item itemvalue="JUnit.PagoQrServiceTest.pagoRealizadoConQr" />
+      <item itemvalue="JUnit.CodigoQrServiceTest.generarCodigoQr" />
+      <item itemvalue="JUnit.CodigoQrServiceTest.generarImagenQrThrowsIOException" />
+      <item itemvalue="JUnit.CodigoQrServiceTest.generarImagenQrThrowsWriterException" />
+      <item itemvalue="JUnit.CodigoQrServiceTest.nuevoCodigoQr" />
       <item itemvalue="JUnit.CodigoQrServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CodigoQrServiceTest.generarImagenQrThrowsIOException" />
+        <item itemvalue="JUnit.CodigoQrServiceTest.generarImagenQrThrowsWriterException" />
         <item itemvalue="JUnit.CodigoQrServiceTest" />
-        <item itemvalue="JUnit.PagoQrServiceTest" />
-        <item itemvalue="JUnit.PagoQrServiceTest.pagoRealizadoConQr" />
-        <item itemvalue="JUnit.PagoQrServiceTest.iniciarPagoQr" />
-        <item itemvalue="JUnit.PagoQrServiceTest.finalizarPagoQr" />
+        <item itemvalue="JUnit.CodigoQrServiceTest.nuevoCodigoQr" />
+        <item itemvalue="JUnit.CodigoQrServiceTest.generarCodigoQr" />
       </list>
     </recent_temporary>
   </component>
@@ -392,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669228199786</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Actualizacion: Nuevos Test CodigoQRService y PagoQrService">
+      <created>1669839131059</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669839131059</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -407,7 +411,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Problema solucionado" />
     <MESSAGE value="Controller con postman" />
     <MESSAGE value="Solución de errores y mejora en Controller&#10;(Agregado de @RequestBody)" />
     <MESSAGE value="Mejora en RestController" />
@@ -432,7 +435,8 @@
     <MESSAGE value="Actualizacion: Cambio de Compras a Movimientos; Ahora todo tipo de transaccion se hace en la tabla movimientos" />
     <MESSAGE value="Actualizacion: Fin de requerimiento + html + pago a multiples QR + repo Qr funcionando + Todo listuqui" />
     <MESSAGE value="Actualizacion: Mejora en los tests, epico!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion: Mejora en los tests, epico!" />
+    <MESSAGE value="Actualizacion: Nuevos Test CodigoQRService y PagoQrService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion: Nuevos Test CodigoQRService y PagoQrService" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -445,10 +449,13 @@
     <SUITE FILE_PATH="coverage/sistemaBBVA$PagoQrServiceTest_iniciarPagoQr.ic" NAME="PagoQrServiceTest.iniciarPagoQr Coverage Results" MODIFIED="1669837729563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CodigoQrServiceTest_generarImagenQrThrowsWriterException.ic" NAME="CodigoQrServiceTest.generarImagenQrThrowsWriterException Coverage Results" MODIFIED="1670261907123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/sistemaBBVA$PagoQrServiceTest_eliminarPagoQr.ic" NAME="PagoQrServiceTest.eliminarPagoQr Coverage Results" MODIFIED="1669835962040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/sistemaBBVA$PagoQrServiceTest.ic" NAME="PagoQrServiceTest Coverage Results" MODIFIED="1669838175885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/sistemaBBVA$PagoQrServiceTest.ic" NAME="PagoQrServiceTest Coverage Results" MODIFIED="1669916278144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/sistemaBBVA$QrTest.ic" NAME="QrTest Coverage Results" MODIFIED="1669750417725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -469,7 +476,7 @@
     <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest_when2listarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente.ic" NAME="CompraServiceTest.when2listarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente Coverage Results" MODIFIED="1669227839185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/sistemaBBVA$CodigoQrServiceTest.ic" NAME="CodigoQrServiceTest Coverage Results" MODIFIED="1669838664363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CodigoQrServiceTest.ic" NAME="CodigoQrServiceTest Coverage Results" MODIFIED="1669923570566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest.ic" NAME="CompraServiceTest Coverage Results" MODIFIED="1669227781297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -484,6 +491,9 @@
     <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest_whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente.ic" NAME="CompraServiceTest.whenlistarComprasClienteTarjetaThenSoloDevuelveComprasDeUnaSolaTarjetaDeUnSoloCliente Coverage Results" MODIFIED="1667238540580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CodigoQrServiceTest_generarImagenQrThrowsIOException.ic" NAME="CodigoQrServiceTest.generarImagenQrThrowsIOException Coverage Results" MODIFIED="1670264386067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/sistemaBBVA$PruebaTestTest.ic" NAME="PruebaTestTest Coverage Results" MODIFIED="1666472107227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
@@ -493,10 +503,10 @@
     <SUITE FILE_PATH="coverage/sistemaBBVA$CompraServiceTest.exec" NAME="CompraServiceTest Coverage Results" MODIFIED="1667238690803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/sistemaBBVA$CodigoQrServiceTest_getIdPathDevuelveValor.ic" NAME="CodigoQrServiceTest.getIdPathDevuelveValor Coverage Results" MODIFIED="1669754428824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CodigoQrServiceTest_getIdPathTiraException.ic" NAME="CodigoQrServiceTest.getIdPathTiraException Coverage Results" MODIFIED="1669755002054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/sistemaBBVA$CodigoQrServiceTest_getIdPathTiraException.ic" NAME="CodigoQrServiceTest.getIdPathTiraException Coverage Results" MODIFIED="1669755002054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/sistemaBBVA$CodigoQrServiceTest_getIdPathDevuelveValor.ic" NAME="CodigoQrServiceTest.getIdPathDevuelveValor Coverage Results" MODIFIED="1669916067980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.martinacode.sistemaBBVA.service.*</FILTER>
     </SUITE>
   </component>

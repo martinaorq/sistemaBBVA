@@ -7,7 +7,6 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.martinacode.sistemaBBVA.model.Qr;
-import com.martinacode.sistemaBBVA.repository.Estado;
 import com.martinacode.sistemaBBVA.repository.QrRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -27,6 +26,12 @@ public class CodigoQrService implements ICodigoQrService {
 
     @Autowired
     private QrRepo qrRepo;
+
+    Resource imagen;
+    QRCodeWriter qrCodeWriter = new QRCodeWriter();
+    BitMatrix bitMatrix = new BitMatrix(1);
+
+
 
     @Override
     public Qr nuevoCodigoQr(double importe, String nombrePersona, String nombreMercado) {
@@ -52,30 +57,25 @@ public class CodigoQrService implements ICodigoQrService {
     }
 
     public String generarImagenQr(Qr qr) {
-        String nombreQr= qr.getNombreQr();
         String idQr=Long.toString(qr.getId());
         String absolutePath= getIdPath(idQr);
 
-        QRCodeWriter qrCodeWriter = new QRCodeWriter();
-        BitMatrix bitMatrix = null;
         try {
-            bitMatrix = qrCodeWriter.encode(nombreQr, BarcodeFormat.QR_CODE, 250, 250);
-            System.out.println(bitMatrix);
+            bitMatrix = qrCodeWriter.encode(qr.getNombreQr(), BarcodeFormat.QR_CODE, 250, 250);
         } catch (WriterException e) {
-            throw new RuntimeException(e);
+            throw new EncodeException("El codigo falló porque "+e.getMessage());
         }
         Path path = FileSystems.getDefault().getPath(absolutePath);
-        System.out.println(path);
         try {
             MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new WriteToPathException(e.getMessage());
         }
         return absolutePath;
     }
 
     public String getIdPath(String idQr){
-        final Resource imagen= resourceloader.getResource("classpath:static/qrcode.png");
+        imagen= resourceloader.getResource("classpath:static/qrcode.png");
         File file = null;
         try {
             file = imagen.getFile();
@@ -87,6 +87,10 @@ public class CodigoQrService implements ICodigoQrService {
         return absolutePath;
     }
 
+    public void setQrRepo(QrRepo qrRepo) {
+        this.qrRepo = qrRepo;
+    }
+
     @Override
     public String consultarDatosQr(Qr codigoQr) {
         return codigoQr.toString();
@@ -95,4 +99,14 @@ public class CodigoQrService implements ICodigoQrService {
     public void setResourceloader(ResourceLoader resourceloader) {
         this.resourceloader = resourceloader;
     }
+
+    public void setQrCodeWriter(QRCodeWriter qrCodeWriter) {
+        this.qrCodeWriter = qrCodeWriter;
+    }
+
+    public void setBitMatrix(BitMatrix bitMatrix) {
+        this.bitMatrix = bitMatrix;
+    }
 }
+
+
